@@ -1,18 +1,23 @@
 {
-  "name": "protocol-buffers-schema",
+  "name": "@netflix-internal/protocol-buffers-schema",
   "version": "3.6.0",
   "description": "No nonsense protocol buffers schema parser written in Javascript",
   "main": "index.js",
   "devDependencies": {
+    "@netflix-internal/release": "^1.10.0",
     "standard": "^10.0.3",
     "tape": "^4.8.0"
   },
   "scripts": {
-    "test": "standard && tape test/*.js"
+    "test": "standard && tape test/*.js",
+    "release": "npm run test && nflx-release"
+  },
+  "publishConfig": {
+    "registry": "https://artifacts.netflix.net/api/npm/npm-netflix"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/protocol-buffers-schema"
+    "url": "https://stash.corp.netflix.com/scm/sct-npm/protocol-buffers-schema.git"
   },
   "keywords": [
     "protobuf",
@@ -27,5 +32,10 @@
   "bugs": {
     "url": "https://github.com/mafintosh/protocol-buffers-schema/issues"
   },
-  "homepage": "https://github.com/mafintosh/protocol-buffers-schema"
+  "homepage": "https://github.com/mafintosh/protocol-buffers-schema",
+  "@netflix-internal/release": {
+    "packageManager": "npm",
+    "primaryBranch": "main",
+    "push": false
+  }
 }
