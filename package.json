@@ -1,6 +1,6 @@
 {
   "name": "@netflix-internal/protocol-buffers-schema",
-  "version": "3.6.0",
+  "version": "3.6.1-netflix-internal-ce9f189.0",
   "description": "No nonsense protocol buffers schema parser written in Javascript",
   "main": "index.js",
   "devDependencies": {
